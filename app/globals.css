@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -18,16 +20,131 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Raleway', sans-serif !important; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poiret One', cursive;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.animate-gradient {
+  z-index: -2;
+  background: linear-gradient(45.3deg, rgb(0, 0, 0) 10.6%, rgb(69, 1, 1) 97.7%);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+
+
+/*@keyframes fall {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.falling-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; 
+}
+
+.falling-lines::before, .falling-lines::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 1px;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  animation: fall linear infinite;
+}
+
+.falling-lines::before {
+  animation-duration: 3s;
+  animation-delay: -2s;
+  left: 20%;
+}
+
+.falling-lines::after {
+  animation-duration: 5s;
+  animation-delay: -4s;
+  left: 80%;
+} */
+
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.falling-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Ensure it is below the content */
+}
+
+.falling-lines .line {
+  position: absolute;
+  width: 1px;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  animation: fall linear infinite;
+}
+
+.falling-lines .line:nth-child(1) {
+  left: 20%;
+  animation-duration: 3s;
+  animation-delay: -2s;
+}
+
+.falling-lines .line:nth-child(2) {
+  left: 40%;
+  animation-duration: 4s;
+  animation-delay: -3s;
+}
+
+.falling-lines .line:nth-child(3) {
+  left: 60%;
+  animation-duration: 5s;
+  animation-delay: -4s;
+}
+
+.falling-lines .line:nth-child(4) {
+  left: 80%;
+  animation-duration: 6s;
+  animation-delay: -5s;
 }
