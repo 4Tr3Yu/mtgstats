@@ -1,52 +1,15 @@
-import React from "react";
-
+'use client'
+import React from 'react';
+import MainMenu from './components/menu/MainMenu';
 export default function Home() {
   return (
-    <div className="mb-32 grid text-center lg:w-full lg:max-w-5xl lg:grid-cols-3 lg:text-center">
-      <a
-        href="/auth/login"
-        className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-        rel="noopener noreferrer"
-      >
-        <h2 className="mb-3 text-2xl font-semibold">
-          Login{" "}
-          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-            -&gt;
-          </span>
-        </h2>
-      </a>
-
-      <a
-        href="/auth/singup"
-        className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <h2 className="mb-3 text-2xl font-semibold">
-          Register{" "}
-          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-            -&gt;
-          </span>
-        </h2>
-        <p className="m-0 max-w-[30ch] text-sm opacity-50">Its Free :D</p>
-      </a>
-
-      <a
-        href="New Game"
-        className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <h2 className="mb-3 text-2xl font-semibold">
-          New game{" "}
-          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-            -&gt;
-          </span>
-        </h2>
-        <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-          Start a new game, count your life points and more
-        </p>
-      </a>
-    </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <MainMenu/>
+        <article className="w-full h-full card border p-5 ">
+          <h2>Welcome</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A cumque maiores ab atque praesentium tempore veritatis eum asperiores deleniti soluta, obcaecati officiis saepe cum alias numquam suscipit. In, cum unde?</p>
+        </article>
+      </div>
+   
   );
 }

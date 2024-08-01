@@ -1,10 +1,10 @@
 "use client"
 import React from 'react';
 import '../styles/lines.scss';
-
 interface LinesProps {
     className?: string;
 }
+
 const Lines: React.FC<LinesProps> = ({ className }) => {
     return (
         <div className={`lines ${className}`}>

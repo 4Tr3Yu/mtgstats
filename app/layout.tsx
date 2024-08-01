@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body className="animate-gradient">
 				<Background />
-				<main className="flex min-h-screen flex-col items-center justify-center p-24 overflow-hidden h-screen">
+				<main className="flex min-h-screen flex-col items-center justify-center px-10  pt-24">
 					<Header/>
 					{children}
 					<Footer/>
