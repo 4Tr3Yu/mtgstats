@@ -22,7 +22,7 @@ export default function MainMenu() {
 	return(
 		<div className="">
       {menu.map((item,index) => (
-        <MenuItem routeTo={item.routeTo} text={item.text}/>
+        <MenuItem routeTo={item.routeTo} text={item.text} key={index}/>
       ))}
     </div>
 	)
