@@ -1,4 +1,3 @@
-'use client'
 import MenuItem from './MenuItem'
 const menu = [
   {
@@ -10,7 +9,7 @@ const menu = [
     text: 'Register'
   },
   {
-    routeTo: '/game/new',
+    routeTo: '/game/lifecounter',
     text: 'Life Counter'
   },
   {

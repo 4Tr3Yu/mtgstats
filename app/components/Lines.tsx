@@ -1,4 +1,3 @@
-"use client"
 import React from 'react';
 import '../styles/lines.scss';
 interface LinesProps {
