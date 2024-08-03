@@ -13,10 +13,10 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-    },
-    fontFamily: {
-      poiret: ['"Poiret One"', 'cursive'],
-      raleway: ['"Raleway"', 'sans-serif'],
+      fontFamily: {
+          sans: ['var(--font-raleway)'],
+          mono: ['var(--font-poiret-one)'],
+      },
     },
   },
   plugins: [],

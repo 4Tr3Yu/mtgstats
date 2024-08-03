@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
+html {
+}
+ 
+h1 {
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -19,11 +23,15 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  font-family: 'Raleway', sans-serif !important; 
+  font-family: var(--font-raleway) !important;
+
+  // font-family: 'Raleway', sans-serif !important; 
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poiret One', cursive;
+  //font-family: 'Poiret One', cursive;
+  font-family: var(--font-poiret_one) !important;
+
 }
 
 @layer utilities {
