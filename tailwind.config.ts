@@ -6,6 +6,10 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    'bg-sky-800',
+    'bg-orange-800'
+  ],
   theme: {
     extend: {
       backgroundImage: {

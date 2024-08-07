@@ -9,7 +9,8 @@ export default function Background() {
                 <Image 
                     src='/images/warleaderscall.webp'
                     fill
-                    alt='bg'    
+                    alt='bg'  
+                    className='object-cover' 
                 />
             </div>
             <Lines />
