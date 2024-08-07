@@ -1,28 +1,28 @@
-import MenuItem from './MenuItem'
+import MenuItem from "./MenuItem";
 const menu = [
-  {
-    routeTo: '/auth/login',
-    text: 'Login'
-  },
-  {
-    routeTo: '/auth/singup',
-    text: 'Register'
-  },
-  {
-    routeTo: '/game/lifecounter',
-    text: 'Life Counter'
-  },
-  {
-    routeTo: '/game/report',
-    text: 'Report Game'
-  }
-]
+	{
+		routeTo: "/auth/login",
+		text: "Login",
+	},
+	{
+		routeTo: "/auth/singup",
+		text: "Register",
+	},
+	{
+		routeTo: "/game/lifecounter",
+		text: "Life Counter",
+	},
+	{
+		routeTo: "/game/report",
+		text: "Report Game",
+	},
+];
 export default function MainMenu() {
-	return(
+	return (
 		<div className="">
-      {menu.map((item,index) => (
-        <MenuItem routeTo={item.routeTo} text={item.text} key={index}/>
-      ))}
-    </div>
-	)
+			{menu.map((item, index) => (
+				<MenuItem routeTo={item.routeTo} text={item.text} key={item.routeTo} />
+			))}
+		</div>
+	);
 }

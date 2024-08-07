@@ -1,7 +1,6 @@
-'use client';
+"use client";
 
-import Image from "next/image";
-import React from "react";
+import type React from "react";
 
 interface IconProps {
 	src: string;
@@ -11,16 +10,24 @@ interface IconProps {
 	className: string;
 }
 
-const Icon: React.FC<IconProps> = ({src, width, height, color, className}) => {
+const Icon: React.FC<IconProps> = ({
+	src,
+	width,
+	height,
+	color,
+	className,
+}) => {
 	return (
-		<div className={`icon ${className}`} style={{
-			backgroundColor: color,
-			WebkitMask: `url(${src}) 0 0/${width}px ${height}px`,
-			mask: `url(${src})  0 0/${width}px ${height}px`,
-			width: `${width}px`,
-			height:	`${height}px`
-
-		}}></div>
+		<div
+			className={`icon ${className}`}
+			style={{
+				backgroundColor: color,
+				WebkitMask: `url(${src}) 0 0/${width}px ${height}px`,
+				mask: `url(${src})  0 0/${width}px ${height}px`,
+				width: `${width}px`,
+				height: `${height}px`,
+			}}
+		/>
 	);
 };
 
